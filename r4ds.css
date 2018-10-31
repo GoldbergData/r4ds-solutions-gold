@@ -2,9 +2,8 @@
   opacity: 1;
   text-align: left;
 }
-
 #header .title {
-  margin-bottom: 0em;
+  margin-bottom: 0;
 }
 #header h4.author {
   margin: 0;
@@ -14,10 +13,13 @@
   font-style: normal;
 }
 
+
+
 .question {
-  margin: 20px 0;
-  padding: 15px 30px 15px 15px;
-  border-left: 5px solid #eee;
+  margin: 0 0 .85em 0;
+  padding: 0 15px;
+  opacity: 0.75;
+  border-left: 4px solid #dcdcdc
 }
 
 .question blockquote:first-child {
@@ -27,5 +29,3 @@
 .question blockquote:last-child {
   margin-bottom: 0
 }
-
-

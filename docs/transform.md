@@ -14,6 +14,7 @@ library("tidyverse")
 ### Exercise <span class="exercise-number">5.2.4.1</span> {.unnumbered .exercise}
 
 <div class="question">
+
 Find all flights that
 
 1.  Had an arrival delay of two or more hours
