@@ -1,4 +1,4 @@
-# R for Data Science Solutions
+# R for Data Science Exercise Solutions
 
 This repository is a work-in-progress of my solutions for R for Data Science. The solutions are complete, but I am slowly converting them into book format with the [bookdown package](https://bookdown.org). 
 
