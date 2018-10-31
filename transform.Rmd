@@ -1,1 +1,75 @@
+# Data transformation
+
+## Introduction
+
+```{r message=FALSE,cache=FALSE}
+library("nycflights13")
+library("tidyverse")
+```
+
+## Filter rows with `filter()`
+
+### Exercise <span class="exercise-number">5.2.4.1</span> {.unnumbered .exercise}
+
+<div class="question">
+Find all flights that
+
+1.  Had an arrival delay of two or more hours
+1.  Flew to Houston (IAH or HOU)
+1.  Were operated by United, American, or Delta
+1.  Departed in summer (July, August, and September)
+1.  Arrived more than two hours late, but didn’t leave late
+1.  Were delayed by at least an hour, but made up over 30 minutes in flight
+1.  Departed between midnight and 6am (inclusive)
+
+</div>
+
+<div class="answer">
+
+The answer to each part follows.
+
+1.  Using a couple of functions to knowledge, including `arrange()` and `%>%` (pipe). More on pipe
+    later. Viewed the data `?` and `glimpse()` before constructing `filter()` functions.
+
+    ```{r}
+    data('flights')
+    glimpse(flights)
+    ?flights
+
+    filter(flights, arr_delay >= 120) %>% arrange(arr_delay)
+    ```
+
+1.  Flew to Houston (IAH or HOU)
+    ```{r}
+    filter(flights, dest %in% c('IAH', 'HOU')) %>% arrange(dest)
+    ```
+
+1.  Were operated by United, American, or Delta
+    ```{r}
+    filter(flights, carrier %in% c('UA', 'AA', 'DL')) %>% arrange(carrier)
+    ```
+
+1.  Departed in summer (July, August, and September)
+    ```{r}
+    filter(flights, month >= 7, month <= 9)
+    ```
+
+1.  Arrived more than two hours late, but didn't leave late
+    ```{r}
+    filter(flights, dep_delay <= 0, arr_delay > 120)
+    ```
+
+1.  Were delayed by at least an hour, but made up over 30 minutes in flight
+    ```{r}
+    filter(flights, dep_delay >= 60 & dep_delay - arr_delay > 30) %>% 
+      arrange(dep_delay, arr_delay)
+    ```
+
+1.  Departed between midnight and 6 a.m. (inclusive)
+    ```{r}
+    filter(flights, between(dep_time, 0, 600)) %>% arrange(dep_time)
+    ```
+
+</div>
+
 
