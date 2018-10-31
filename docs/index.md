@@ -3,13 +3,15 @@
 title: "R for Data Science Solutions"
 author: "Joshua Goldberg"
 date: "2018-10-31"
+url: "https://goldbergdata.github.io/r4ds-solutions-gold/index.html"
+twitter-handle: goldbergdata
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: rstudio/bookdown-demo
+github-repo: https://github.com/GoldbergData/r4ds-solutions-gold
 description: "This book contains the author's solutions for the exercises found in R for Data Science"
 ---
 

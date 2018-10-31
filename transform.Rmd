@@ -13,7 +13,7 @@ library("tidyverse")
 
 <div class="question">
 
-Find all flights that
+Find all flights that:
 
 1.  Had an arrival delay of two or more hours
 1.  Flew to Houston (IAH or HOU)
